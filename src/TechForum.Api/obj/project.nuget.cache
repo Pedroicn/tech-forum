@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Nw5akSd5N9h5d3Rn2MuY8PJOh1ppuWaz8nCJP1Shl4h/up/4FoinvLSF9oNb5SzfDn3CWvY6+cGoDBvvMR+HeQ==",
+  "dgSpecHash": "kb+o5l0taVMG8XZaZKj8rs0sipk/SQIvPtbF4SM912pjITxd9/EW/Ans1A+1UYRRLlf/160N3ycFwB70BUDBxQ==",
   "success": true,
   "projectFilePath": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Api/TechForum.Api.csproj",
   "expectedPackageFiles": [

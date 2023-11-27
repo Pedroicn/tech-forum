@@ -107,6 +107,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "TechForum.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/TechForum.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechForum.Business.dll": {}
+        }
       }
     }
   },
@@ -460,12 +470,18 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "TechForum.Business/1.0.0": {
+      "type": "project",
+      "path": "../TechForum.Business/TechForum.Business.csproj",
+      "msbuildProject": "../TechForum.Business/TechForum.Business.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.14",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "TechForum.Business >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -492,7 +508,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/TechForum.Business.csproj": {
+              "projectPath": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/TechForum.Business.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
