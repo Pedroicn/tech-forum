@@ -9,7 +9,7 @@ public class User
   public DateTime CreatedAt { get; set; }
   public DateTime UpdatedAt { get; set; }
 
-  public User(string email, string name, string password)
+  public User(string name, string email, string password)
   {
     Id = Guid.NewGuid();
     Name = name;
