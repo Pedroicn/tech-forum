@@ -30,4 +30,20 @@ public class UserController : ControllerBase
 
     }
   }
+
+  [HttpGet]
+
+  public async Task<ActionResult> GetAll()
+  {
+    try
+    {;
+      List<User> users = await _userRepository.GetAll();
+      return Ok(users);
+    }
+    catch(Exception error)
+    {
+      return BadRequest(new { message = error.Message.ToString() });
+
+    }
+  }
 }

@@ -1,0 +1,17 @@
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/bin/Debug/net7.0/TechForum.Data.deps.json
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/bin/Debug/net7.0/TechForum.Data.runtimeconfig.json
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/bin/Debug/net7.0/TechForum.Data.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/bin/Debug/net7.0/TechForum.Data.pdb
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/bin/Debug/net7.0/TechForum.Business.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/bin/Debug/net7.0/TechForum.Business.pdb
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.csproj.AssemblyReference.cache
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.GeneratedMSBuildEditorConfig.editorconfig
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.AssemblyInfoInputs.cache
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.AssemblyInfo.cs
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.csproj.CoreCompileInputs.cache
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.csproj.CopyComplete
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/refint/TechForum.Data.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.pdb
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/TechForum.Data.genruntimeconfig.cache
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Data/obj/Debug/net7.0/ref/TechForum.Data.dll

@@ -14,4 +14,9 @@ public class UserService : IUserRepository
   {
     await _userrepository.Add(user);
   }
+
+  public async Task<List<User>> GetAll()
+  {
+    return await _userrepository.GetAll();
+  }
 }
