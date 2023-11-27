@@ -2,8 +2,20 @@ namespace TechForum.Business.Models;
 
 public class User
 {
-  private readonly Guid Id;
+  public Guid Id { get; set; }
   public string? Name { get; set; }
   public string? Email { get; set; }
   public string? Password { get; set; }
+  public DateTime CreatedAt { get; set; }
+  public DateTime UpdatedAt { get; set; }
+
+  public User(string email, string name, string password)
+  {
+    Id = Guid.NewGuid();
+    Name = name;
+    Email = email;
+    Password = password;
+    CreatedAt = DateTime.Now;
+    UpdatedAt = DateTime.Now;
+  }
 }
