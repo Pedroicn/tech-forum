@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yLcuthdgUvHCR8zOOS8M9DrF1HtrtbWhWmtcYGgHM1M=",
+  "Source": "TechForum.Api",
+  "BasePath": "_content/TechForum.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

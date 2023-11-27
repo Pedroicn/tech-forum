@@ -1,0 +1,12 @@
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/bin/Debug/net7.0/TechForum.Business.deps.json
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/bin/Debug/net7.0/TechForum.Business.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/bin/Debug/net7.0/TechForum.Business.pdb
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/TechForum.Business.csproj.AssemblyReference.cache
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/TechForum.Business.GeneratedMSBuildEditorConfig.editorconfig
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/TechForum.Business.AssemblyInfoInputs.cache
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/TechForum.Business.AssemblyInfo.cs
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/TechForum.Business.csproj.CoreCompileInputs.cache
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/TechForum.Business.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/refint/TechForum.Business.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/TechForum.Business.pdb
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/Debug/net7.0/ref/TechForum.Business.dll
