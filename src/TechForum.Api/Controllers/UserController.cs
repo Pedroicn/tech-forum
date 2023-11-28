@@ -43,7 +43,6 @@ public class UserController : ControllerBase
     catch(Exception error)
     {
       return BadRequest(new { message = error.Message.ToString() });
-
     }
   }
 }

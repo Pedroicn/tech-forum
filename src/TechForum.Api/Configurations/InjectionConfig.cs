@@ -1,5 +1,5 @@
 using TechForum.Business.Interfaces;
-using TechForum.Business.Services;
+// using TechForum.Business.Services;
 using TechForum.Data.Context;
 using TechForum.Data.Repository;
 
@@ -11,7 +11,6 @@ public static class InjectionConfig
   {
     services.AddScoped<AppDbContext>();
     services.AddScoped<IUserRepository, UserRepository>();
-    // services.AddScoped<IUserRepository, UserService>();
 
     return services;
   }
