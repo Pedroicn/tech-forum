@@ -1,4 +1,6 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using TechForum.Api.Validations;
 using TechForum.Business.Interfaces;
 using TechForum.Business.Models;
 namespace TechForum.Api.Controllers;
@@ -21,13 +23,14 @@ public class UserController : ControllerBase
     try
     {
       var newUser = new User(name, email, password);
+      UserValidation validator = new UserValidation();
+      validator.ValidateAndThrow(newUser);
       await _userRepository.Add(newUser);
       return Created("", newUser);
     }
-    catch(Exception error)
+    catch(ValidationException error)
     {
       return BadRequest(new { message = error.Message.ToString() });
-
     }
   }
 
@@ -43,6 +46,7 @@ public class UserController : ControllerBase
     catch(Exception error)
     {
       return BadRequest(new { message = error.Message.ToString() });
+
     }
   }
 }

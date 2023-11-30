@@ -18,4 +18,5 @@ public class User
     CreatedAt = DateTime.Now;
     UpdatedAt = DateTime.Now;
   }
+
 }
