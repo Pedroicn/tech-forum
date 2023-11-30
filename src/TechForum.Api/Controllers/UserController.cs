@@ -1,3 +1,4 @@
+using System.Net;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using TechForum.Api.Validations;
@@ -5,12 +6,13 @@ using TechForum.Business.Interfaces;
 using TechForum.Business.Models;
 namespace TechForum.Api.Controllers;
 
+[ApiController]
 [Route("api/[controller]")]
-public class UserController : MainController
+public class UserController : ControllerBase
 {
   private readonly IUserRepository _userRepository;
 
-  public UserController(IUserRepository userRepository, INotifier notifier) : base(notifier)
+  public UserController(IUserRepository userRepository)
   {
     _userRepository = userRepository;
   }
@@ -19,18 +21,24 @@ public class UserController : MainController
 
   public async Task<ActionResult> Add(string name, string email, string password)
   {
-    try
+    var newUser = new User(name, email, password);
+    UserValidation validation = new UserValidation();
+    var validator = validation.Validate(newUser);
+
+    List<User> users = await _userRepository.GetAll();
+    var isExistingUser = users.Exists((user) => user.Email == email);
+    
+
+    if (validator.IsValid && !isExistingUser)
     {
-      var newUser = new User(name, email, password);
-      UserValidation validator = new UserValidation();
-      validator.ValidateAndThrow(newUser);
       await _userRepository.Add(newUser);
-      return Created("", newUser);
+      return Ok();
     }
-    catch(ValidationException error)
+    else if (!validator.IsValid)
     {
-      return BadRequest(new { message = error.Message.ToString() });
+      return BadRequest(validator.Errors);
     }
+    return BadRequest("There is already a user with this email");
   }
 
   [HttpGet]
@@ -38,11 +46,11 @@ public class UserController : MainController
   public async Task<ActionResult> GetAll()
   {
     try
-    {;
+    {
       List<User> users = await _userRepository.GetAll();
       return Ok(users);
     }
-    catch(Exception error)
+    catch (Exception error)
     {
       return BadRequest(new { message = error.Message.ToString() });
 
