@@ -5,13 +5,12 @@ using TechForum.Business.Interfaces;
 using TechForum.Business.Models;
 namespace TechForum.Api.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-public class UserController : ControllerBase
+public class UserController : MainController
 {
-  private readonly IUserRepository? _userRepository;
+  private readonly IUserRepository _userRepository;
 
-  public UserController(IUserRepository userRepository)
+  public UserController(IUserRepository userRepository, INotifier notifier) : base(notifier)
   {
     _userRepository = userRepository;
   }
