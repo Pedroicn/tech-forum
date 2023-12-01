@@ -38,8 +38,8 @@ public class Topic
       CommentAmount--;
       _comments.Remove(comment);
       return "Comment removed";
-    } 
+    }
     
-    return "You don't have authorization to remove this topic";
+    return "You don't have authorization to remove this comment";
   }
 }
