@@ -1,5 +1,4 @@
 namespace TechForum.Business.Models;
-
 public class User
 {
   public Guid Id { get; set; }
@@ -27,6 +26,25 @@ public class User
   {
     TopicAmount++;
     _topics.Add(topic);
+  }
+
+  public string DeleteTopic(Topic topic)
+  {
+    if (topic.UserId == Id && !topic.Comments.Any())
+    {
+      TopicAmount--;
+      _topics.Remove(topic);
+      return "Topic removed";
+    } 
+    else if (topic.UserId != Id && !topic.Comments.Any())
+    {
+      return "You don't have authorization to remove this topic";
+    }
+    else
+    {
+      return "There is already comments in this topic";
+    }
+
   }
 
 }

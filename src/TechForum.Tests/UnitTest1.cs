@@ -60,7 +60,7 @@ public class TestCommentMethods
         //Act
         newUser.AddTopics(newTopic);
         newTopic.AddComments(newComment);
-        newTopic.DeleteComment(newComment);
+        newTopic.DeleteComment(newUser, newComment);
         //Assert
         Assert.Equal(0, newTopic.CommentAmount);
         Assert.Equal(0, newTopic.Comments.Count);

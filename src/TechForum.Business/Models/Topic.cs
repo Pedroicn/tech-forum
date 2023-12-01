@@ -31,4 +31,15 @@ public class Topic
     _comments.Add(comment);
   }
 
+  public string DeleteComment(User user, Comment comment)
+  {
+    if (comment.UserId == user.Id)
+    {
+      CommentAmount--;
+      _comments.Remove(comment);
+      return "Comment removed";
+    } 
+    
+    return "You don't have authorization to remove this topic";
+  }
 }
