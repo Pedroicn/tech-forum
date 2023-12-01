@@ -15,9 +15,10 @@ public class Topic
 
   public IReadOnlyCollection<Comment> Comments => _comments;
 
-  public Topic(User user, string title, string description)
+  public Topic(Guid userId, string title, string description)
   {
-    UserId = user.Id;
+    _comments = new List<Comment>();
+    UserId = userId;
     TopicId = Guid.NewGuid();
     Title = title;
     Description = description;
