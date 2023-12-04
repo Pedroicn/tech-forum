@@ -3,11 +3,13 @@ namespace TechForum.Business.Models;
 public class Comment
 {
   public Guid UserId { get; private set; }
+  public Guid CommentId { get; private set; }
   public string Description { get; private set; }
   
-  public Comment(User user, string description)
+  public Comment(Guid userId, string description)
   {
-    UserId = user.Id;
+    UserId = userId;
+    CommentId = Guid.NewGuid();
     Description = description;
   }
 }
