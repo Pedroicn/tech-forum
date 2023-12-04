@@ -32,4 +32,9 @@ public class UserRepository : IUserRepository
   {
     return await DbSet.ToListAsync();
   }
+
+  public async Task<User> GetUser(Guid id)
+  {
+    return await DbSet.FindAsync(id);
+  }
 }

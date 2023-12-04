@@ -56,4 +56,24 @@ public class UserController : ControllerBase
 
     }
   }
+
+  [HttpGet("{id}")]
+
+  public async Task<ActionResult> GetUser(Guid id)
+  {
+    try
+    {
+      User user = await _userRepository.GetUser(id);
+      if (user == null)
+      {
+        return NotFound();
+      }
+      return Ok(user);
+    }
+    catch (Exception error)
+    {
+      return BadRequest(new { message = error.Message.ToString() });
+
+    }
+  }
 }
