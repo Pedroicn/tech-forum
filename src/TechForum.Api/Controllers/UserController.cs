@@ -76,4 +76,16 @@ public class UserController : ControllerBase
 
     }
   }
+  
+  [HttpPost("login")]
+  public async Task<ActionResult> Login(string email, string password)
+  {
+    User user = await _userRepository.Login(email, password);
+    if (user == null)
+    {
+      return NotFound();
+    }
+    return Ok(user);
+    
+  }
 }
