@@ -17,4 +17,7 @@
     <ProjectReference Include="..\TechForum.Business\TechForum.Business.csproj" />
     <ProjectReference Include="..\TechForum.Data\TechForum.Data.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\LoginController.cs" />
+  </ItemGroup>
 </Project>
