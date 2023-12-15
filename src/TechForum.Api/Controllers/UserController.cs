@@ -77,15 +77,28 @@ public class UserController : ControllerBase
     }
   }
   
+  [HttpPost("topic")]
+  public async Task<ActionResult> AddTopics(Guid userId, string title, string description)
+  {
+    User user = await _userRepository.GetUser(userId);
+    if (user == null)
+    {
+      return NotFound("Invalid");
+    }
+    await _userRepository.AddTopics(user, title, description);
+    return Ok(user);
+    
+  }
+  
   [HttpPost("login")]
   public async Task<ActionResult> Login(string email, string password)
   {
     User user = await _userRepository.Login(email, password);
     if (user == null)
     {
-      return NotFound();
+      return NotFound("Invalid email or password");
     }
-    return Ok(user);
+    return Ok("User logged succesfully");
     
   }
 }

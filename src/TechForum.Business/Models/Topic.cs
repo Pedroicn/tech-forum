@@ -19,7 +19,7 @@ public class Topic
   {
     _comments = new List<Comment>();
     UserId = userId;
-    TopicId = Guid.NewGuid();
+    // TopicId = Guid.NewGuid();
     Title = title;
     Description = description;
     CreatedAt = DateTime.Now;
