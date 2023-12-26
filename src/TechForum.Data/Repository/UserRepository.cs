@@ -16,6 +16,7 @@ public class UserRepository : IUserRepository
   {
     Db = db;
     DbSet = db.Set<User>();
+
   }
 
   public async Task<int> SaveChanges()
@@ -42,7 +43,7 @@ public class UserRepository : IUserRepository
   {
     return Db.Users.FirstOrDefault((user) => user.Email == email && user.Password == password);
   }
-
+  
   public async Task AddTopics(User user, string title, string description)
   {
 
@@ -50,6 +51,15 @@ public class UserRepository : IUserRepository
       user.AddTopics(topic);
       DbSet.Update(user);
       await SaveChanges();
+      
+  }
+  
+  public async Task AddComments(User user, Topic topic, string description)
+  {
+    Comment comment = new Comment(user.Id, topic.TopicId, description);
+    topic.AddComments(comment);
+    Db.Update(topic);
+    await SaveChanges();
       
   }
 }

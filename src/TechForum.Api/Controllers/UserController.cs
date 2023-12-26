@@ -11,10 +11,12 @@ namespace TechForum.Api.Controllers;
 public class UserController : ControllerBase
 {
   private readonly IUserRepository _userRepository;
+  private readonly ITopicRepository _topicRepository;
 
-  public UserController(IUserRepository userRepository)
+  public UserController(IUserRepository userRepository, ITopicRepository topicRepository)
   {
     _userRepository = userRepository;
+    _topicRepository = topicRepository;
   }
 
   [HttpPost]
@@ -77,16 +79,17 @@ public class UserController : ControllerBase
     }
   }
   
-  [HttpPost("topic")]
-  public async Task<ActionResult> AddTopics(Guid userId, string title, string description)
+  [HttpPost("comment")]
+  public async Task<ActionResult> AddComments(Guid userId, Guid topicId, string description)
   {
     User user = await _userRepository.GetUser(userId);
-    if (user == null)
+    Topic topic = await _topicRepository.GetTopic(topicId);
+    if (topic == null)
     {
       return NotFound("Invalid");
     }
-    await _userRepository.AddTopics(user, title, description);
-    return Ok(user);
+    await _userRepository.AddComments(user, topic, description);
+    return Ok(topic);
     
   }
   

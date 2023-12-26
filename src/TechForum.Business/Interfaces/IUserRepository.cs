@@ -10,6 +10,7 @@ public interface IUserRepository
   Task<User> Login(string email, string password);
   Task<User> GetUser(Guid id);
   Task<List<User>> GetAll();
+  
+  Task AddComments(User user, Topic topic, string description);
 
-  Task AddTopics(User user, string title, string description);
 }

@@ -13,6 +13,8 @@ public static class InjectionConfig
   {
     services.AddScoped<AppDbContext>();
     services.AddScoped<IUserRepository, UserRepository>();
+    services.AddScoped<ITopicRepository, TopicRepository>();
+
     services.AddScoped<INotifier, Notifier>();
 
     return services;
