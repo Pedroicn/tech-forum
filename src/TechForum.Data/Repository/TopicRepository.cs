@@ -22,6 +22,10 @@ public class TopicRepository : ITopicRepository
         return await DbSet.FindAsync(id);
     }
     
+    public async Task<List<Topic>> GetAllTopics()
+    {
+        return await DbSet.ToListAsync();
+    }
     public async Task AddTopics(User user, string title, string description)
     {
 

@@ -79,20 +79,6 @@ public class UserController : ControllerBase
     }
   }
   
-  [HttpPost("comment")]
-  public async Task<ActionResult> AddComments(Guid userId, Guid topicId, string description)
-  {
-    User user = await _userRepository.GetUser(userId);
-    Topic topic = await _topicRepository.GetTopic(topicId);
-    if (topic == null)
-    {
-      return NotFound("Invalid");
-    }
-    await _userRepository.AddComments(user, topic, description);
-    return Ok(topic);
-    
-  }
-  
   [HttpPost("login")]
   public async Task<ActionResult> Login(string email, string password)
   {

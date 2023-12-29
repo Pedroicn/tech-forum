@@ -31,7 +31,7 @@ public class UserRepository : IUserRepository
 
   public async Task<List<User>> GetAll()
   {
-    return await DbSet.Include(c => c.topics).ToListAsync();
+    return await DbSet.ToListAsync();
   }
 
   public async Task<User> GetUser(Guid id)
@@ -44,22 +44,4 @@ public class UserRepository : IUserRepository
     return Db.Users.FirstOrDefault((user) => user.Email == email && user.Password == password);
   }
   
-  public async Task AddTopics(User user, string title, string description)
-  {
-
-      Topic topic = new Topic(user.Id, title, description);
-      user.AddTopics(topic);
-      DbSet.Update(user);
-      await SaveChanges();
-      
-  }
-  
-  public async Task AddComments(User user, Topic topic, string description)
-  {
-    Comment comment = new Comment(user.Id, topic.TopicId, description);
-    topic.AddComments(comment);
-    Db.Update(topic);
-    await SaveChanges();
-      
-  }
 }

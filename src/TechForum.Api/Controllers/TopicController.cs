@@ -50,4 +50,20 @@ public class TopicController : ControllerBase
       return Ok(user);
       
     }
+    
+    [HttpGet]
+
+    public async Task<ActionResult> GetAllComments()
+    {
+        try
+        {
+            List<Topic> topic = await _topicRepository.GetAllTopics();
+            return Ok(topic);
+        }
+        catch (Exception error)
+        {
+            return BadRequest(new { message = error.Message.ToString() });
+
+        }
+    }
 }
