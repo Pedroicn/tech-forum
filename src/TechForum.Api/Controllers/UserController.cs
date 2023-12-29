@@ -11,36 +11,10 @@ namespace TechForum.Api.Controllers;
 public class UserController : ControllerBase
 {
   private readonly IUserRepository _userRepository;
-  private readonly ITopicRepository _topicRepository;
 
   public UserController(IUserRepository userRepository, ITopicRepository topicRepository)
   {
     _userRepository = userRepository;
-    _topicRepository = topicRepository;
-  }
-
-  [HttpPost]
-
-  public async Task<ActionResult> Add(string name, string email, string password)
-  {
-    var newUser = new User(name, email, password);
-    UserValidation validation = new UserValidation();
-    var validator = validation.Validate(newUser);
-
-    List<User> users = await _userRepository.GetAll();
-    var isExistingUser = users.Exists((user) => user.Email == email);
-    
-
-    if (validator.IsValid && !isExistingUser)
-    {
-      await _userRepository.Add(newUser);
-      return Ok();
-    }
-    else if (!validator.IsValid)
-    {
-      return BadRequest(validator.Errors);
-    }
-    return BadRequest("There is already a user with this email");
   }
 
   [HttpGet]
@@ -79,15 +53,4 @@ public class UserController : ControllerBase
     }
   }
   
-  [HttpPost("login")]
-  public async Task<ActionResult> Login(string email, string password)
-  {
-    User user = await _userRepository.Login(email, password);
-    if (user == null)
-    {
-      return NotFound("Invalid email or password");
-    }
-    return Ok("User logged succesfully");
-    
-  }
 }
