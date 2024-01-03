@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pKKasu2MEZMBQq0ZqY81BcOoExmb+6B3hLB8rzD7xkMb1Ak8cU/0DLMWpmqh/VgFnG91eUOlz/6Db2dqTiYl5w==",
+  "dgSpecHash": "snYmQOm3cfm2dgs1bvubwpIgBfg6mVOC5S3wTILXfFhnzyhsIUgDu4dClcag1VtLX/iXQ4QcDweotnKAALycqQ==",
   "success": true,
   "projectFilePath": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Api/TechForum.Api.csproj",
   "expectedPackageFiles": [
     "/home/pedro_igor/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/home/pedro_igor/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
+    "/home/pedro_igor/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/pedro_igor/.nuget/packages/fluentvalidation/11.8.1/fluentvalidation.11.8.1.nupkg.sha512",
     "/home/pedro_igor/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/pedro_igor/.nuget/packages/microsoft.aspnetcore.openapi/7.0.14/microsoft.aspnetcore.openapi.7.0.14.nupkg.sha512",

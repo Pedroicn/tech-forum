@@ -4,6 +4,59 @@
     "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Tests/TechForum.Tests.csproj": {}
   },
   "projects": {
+    "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/TechForum.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/TechForum.Business.csproj",
+        "projectName": "TechForum.Business",
+        "projectPath": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/TechForum.Business.csproj",
+        "packagesPath": "/home/pedro_igor/.nuget/packages/",
+        "outputPath": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/pedro_igor/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Tests/TechForum.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +78,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/TechForum.Business.csproj": {
+                "projectPath": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Business/TechForum.Business.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

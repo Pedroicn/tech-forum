@@ -1,0 +1,48 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "DotNetWatch",
+      "request": "launch",
+      "name": ".NET Core Watch: TechForum.Api",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
+      },
+      "project": "TechForum.Api.csproj"
+    },
+    {
+      "type": "DotNetWatch",
+      "request": "launch",
+      "name": ".NET Core Watch: TechForum.Tests",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
+      },
+      "project": "TechForum.Tests.csproj"
+    },
+    {
+      "type": "DotNetWatch",
+      "request": "launch",
+      "name": ".NET Core Watch: TechForum.Business",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
+      },
+      "project": "TechForum.Business.csproj"
+    },
+    {
+      "type": "DotNetWatch",
+      "request": "launch",
+      "name": ".NET Core Watch: TechForum.Data",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
+      },
+      "project": "TechForum.Data.csproj"
+    }
+  ]
+}

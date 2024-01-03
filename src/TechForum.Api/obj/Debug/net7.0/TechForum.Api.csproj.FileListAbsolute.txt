@@ -79,3 +79,4 @@
 /home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Api/bin/Debug/net7.0/Mono.TextTemplating.dll
 /home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Api/bin/Debug/net7.0/System.CodeDom.dll
 /home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Api/bin/Debug/net7.0/FluentValidation.dll
+/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Api/bin/Debug/net7.0/BCrypt.Net-Next.dll

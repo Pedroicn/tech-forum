@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xXGDyXDypOIuJrwb9LTxK2DZkyxmeyv/UFi5NFlcLXswUhSQO6h5WgXqtEPwfdQCA+qHjxlNxnEFFxCZ4cpluw==",
+  "dgSpecHash": "NCmWZ2sx2RSRdezrj3ztT0WMXJeeusXIh0SX7KnkqZ4x34Ubuky1MkvAibF61dLwU0pkEFU8bQdFcXkzlNMBeg==",
   "success": true,
   "projectFilePath": "/home/pedro_igor/C#/projeto-tech-forum/src/TechForum.Tests/TechForum.Tests.csproj",
   "expectedPackageFiles": [

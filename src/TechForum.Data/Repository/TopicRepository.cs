@@ -24,7 +24,7 @@ public class TopicRepository : ITopicRepository
     
     public async Task<List<Topic>> GetAllTopics()
     {
-        return await DbSet.ToListAsync();
+        return await DbSet.Include(c => c.Comments).ToListAsync();
     }
     public async Task AddTopics(User user, string title, string description)
     {
