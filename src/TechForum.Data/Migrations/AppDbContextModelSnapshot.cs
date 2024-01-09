@@ -31,7 +31,7 @@ namespace TechForum.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("TopicId")
+                    b.Property<Guid>("TopicId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserId")
@@ -93,6 +93,9 @@ namespace TechForum.Data.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("TopicAmount")
                         .HasColumnType("int");
 
@@ -108,7 +111,9 @@ namespace TechForum.Data.Migrations
                 {
                     b.HasOne("TechForum.Business.Models.Topic", null)
                         .WithMany("Comments")
-                        .HasForeignKey("TopicId");
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TechForum.Business.Models.Topic", b =>

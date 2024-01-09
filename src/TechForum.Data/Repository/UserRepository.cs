@@ -43,7 +43,7 @@ public class UserRepository : IUserRepository
     return await DbSet.FindAsync(id);
   }
   
-  public async Task<User> Login(string email)
+  public async Task<User> GetUserByEmail(string email)
   {
     return Db.Users.FirstOrDefault((user) => user.Email == email);
   }

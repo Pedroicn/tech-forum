@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using TechForum.Business.Models;
 using TechForum.Api.Validations;
 using TechForum.Business.Interfaces;
+using TechForum.Api.Services;
 
 namespace TechForum.Api.Controllers;
 
@@ -11,15 +12,16 @@ namespace TechForum.Api.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly IUserRepository _userRepository;
-    
+    private readonly ITokenService _tokenService;
     
 
-    public AuthController(IUserRepository userRepository)
+    public AuthController(IUserRepository userRepository, ITokenService tokenService)
     {
         _userRepository = userRepository;
+        _tokenService = tokenService;
     }
 
-    [HttpPost]
+    [HttpPost("register")]
 
     public async Task<ActionResult<User>> Register(string name, string email, string password)
     {
@@ -34,6 +36,7 @@ public class AuthController : ControllerBase
         {
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
             newUser.Password = passwordHash;
+            newUser.Role = "user";
             await _userRepository.Add(newUser);
             return Ok();
         }
@@ -47,7 +50,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<ActionResult> Login(string email, string password)
     {
-        User user = await _userRepository.Login(email);
+        User user = await _userRepository.GetUserByEmail(email);
         if (user == null)
         {
             return NotFound("User not found");
@@ -57,7 +60,9 @@ public class AuthController : ControllerBase
         {
             return BadRequest("Wrong password.");
         }
-        return Ok(user);
-    
+
+        var token = _tokenService.CreateToken(user);
+        return Ok(token);
     }
+
 }

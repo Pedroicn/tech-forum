@@ -1,3 +1,4 @@
+using TechForum.Api.Services;
 using TechForum.Business.Interfaces;
 using TechForum.Business.Notifications;
 
@@ -15,7 +16,8 @@ public static class InjectionConfig
     services.AddScoped<IUserRepository, UserRepository>();
     services.AddScoped<ITopicRepository, TopicRepository>();
     services.AddScoped<ICommentRepository, CommentRepository>();
-
+    services.AddScoped<ITokenService, TokenService>();
+    
     services.AddScoped<INotifier, Notifier>();
 
     return services;

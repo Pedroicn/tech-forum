@@ -41,7 +41,7 @@ public class TestCommentMethods
         //Arrange
         var newUser = new User("Pedro", "pedro@gmail.com", "pedro$123");
         var newTopic = new Topic(newUser.Id, "teste", "isso é um teste");
-        var newComment = new Comment(newUser.Id, "this is a comment");
+        var newComment = new Comment(newUser.Id, newTopic.TopicId,"this is a comment");
         //Act
         newTopic.AddComments(newComment);
         //Assert
@@ -56,7 +56,7 @@ public class TestCommentMethods
         //Arrange
         var newUser = new User("Pedro", "pedro@gmail.com", "pedro$123");
         var newTopic = new Topic(newUser.Id, "teste", "isso é um teste");
-        var newComment = new Comment(newUser.Id, "this is a comment");
+        var newComment = new Comment(newUser.Id, newTopic.TopicId,"this is a comment");
         //Act
         newUser.AddTopics(newTopic);
         newTopic.AddComments(newComment);
